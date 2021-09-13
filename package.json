@@ -7,7 +7,8 @@
     "test": "cross-env NODE_ENV=testing jest --watch --verbose --runInBand",
     "migrate": "knex migrate:latest",
     "rollback": "knex migrate:rollback",
-    "seed": "knex seed:run"
+    "seed": "knex seed:run",
+    "resetdb": "npm rollback && npm migrate && npm seed"
   },
   "devDependencies": {
     "@types/jest": "^27.0.1",
@@ -23,9 +24,11 @@
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "express-session": "^1.17.2",
     "helmet": "^4.6.0",
     "knex": "^0.95.7",
-    "sqlite3": "^5.0.2"
+    "sqlite3": "^5.0.2",
+    "yup": "^0.32.9"
   },
   "repository": {
     "type": "git",
